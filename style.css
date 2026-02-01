@@ -117,39 +117,66 @@ body {
 
 /* MOBILE RESPONSIVENESS */
 
-@media (max-width: 600px) and (min-width: 501px) {
-  body {
-    flex-direction: column;
-    display: block;
-    height: auto;
-  }
-  .sidebar {
-    width: auto;
-    height: auto;
-    border-right: none;
-    border-bottom: 0.5px solid #e5e5e5;
-    display: flex;
-    justify-content: space-between;
-  }
+@media screen and (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
 
-  .board-btn {
-    width: auto;
-    padding: 40px 50px;
-  }
+    .main-header {
+        justify-content: center;
+        padding: 15px;
+    }
 
-  .columns {
-    justify-content: center;
-  }
-  .column {
-    width: 100%;
-    max-width: 400px;
-  }
-  .main {
-    padding: 15px;
-    display: grid;
-    flex-direction: column;
-    align-items: center;
-    max-width: 80px;
-  }
+    .main-header h2 {
+        font-size: 0;
+        position: relative;
+    }
+
+    .main-header h2::before {
+        content: "";
+        display: inline-block;
+        background-image: url('assets/logo-light.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 120px; 
+        height: 40px;  
+        vertical-align: middle;
+    }
+
+    .main-header h2::after {
+        content: "▾";
+        font-size: 16px;
+        color: var(--medium-grey);
+        margin-left: 6px;
+    }
+
+    .columns-container {
+        flex-direction: column;
+        padding: 16px;
+        gap: 16px;
+        overflow-x: hidden;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    .task-card {
+        font-size: 14px;
+        padding: 18px 12px;
+    }
 }
 
+@media screen and (max-width: 480px) {
+    .main-header h2 {
+        font-size: 0px;
+    }
+
+    .task-card {
+        width: 90%;
+    }
+
+    .column-header h4 {
+        font-size: 10px;
+    }
+}
