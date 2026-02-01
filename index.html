@@ -2,62 +2,84 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Kanban Board</title>
+`    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <title>Kanban Board</title>
   </head>
   <body>
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <d class="logo">kanban</div>
-      <div class="boards">ALL BOARDS (1)</div>
-      <div class="board-item">Launch Career</div>
-    </aside>
+    <div class="sidebar">
+      <div class="logo">
+        <div
+          style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4px"
+        >
+          <div
+            style="
+              width: 8px;
+              height: 25px;
+              background: #645fc6;
+              border-radius: 5px;
+            "
+          ></div>
+          <div
+            style="
+              width: 8px;
+              height: 25px;
+              background: #9b5de5;
+              border-radius: 5px;
+            "
+          ></div>
+          <div
+            style="
+              width: 8px;
+              height: 25px;
+              background: #45c590;
+              border-radius: 5px;
+            "
+          ></div>
+        </div>
+        kanban
+      </div>
 
-    <!-- Main Content -->
-    <main class="main">
-      <div class="header">Launch Career</div>
+      <div class="boards-title">ALL BOARDS (1)</div>
+      <div class="board-btn">Launch Career</div>
+    </div>
 
-      <section class="kanban">
-        <!-- TODO -->
+    <div class="main">
+      <div class="board-header">Launch Career</div>
+      <br />
+      <div class="columns">
+        <!-- TODO COLUMN -->
         <div class="column">
-          <div class="column-header">
-            <span class="dot todo"></span>
+          <div class="column-title">
+            <div class="circle todo"></div>
             TODO (4)
           </div>
-          <div class="cards">
-            <div class="card">Launch Epic Career 🚀</div>
-            <div class="card">Conquer React ⚛️</div>
-            <div class="card">Understand Databases 🧠</div>
-            <div class="card">Crush Frameworks 📚</div>
-          </div>
+          <div class="card">Launch Epic Career 🚀</div>
+          <div class="card">Conquer React 📚</div>
+          <div class="card">Understand Databases 🧠</div>
+          <div class="card">Crush Frameworks 🖥️</div>
         </div>
 
-        <!-- DOING -->
+        <!-- DOING COLUMN -->
         <div class="column">
-          <div class="column-header">
-            <span class="dot doing"></span>
+          <div class="column-title">
+            <div class="circle doing"></div>
             DOING (3)
           </div>
-          <div class="cards">
-            <div class="card">Master JavaScript 💛</div>
-            <div class="card">Never Give Up 🏆</div>
-            <div class="card">Stay Consistent 🔁</div>
-          </div>
+          <div class="card">Master JavaScript 💛</div>
+          <div class="card">Never Give Up 🏆</div>
         </div>
 
-        <!-- DONE -->
+        <!-- DONE COLUMN -->
         <div class="column">
-          <div class="column-header">
-            <span class="dot done"></span>
+          <div class="column-title">
+            <div class="circle done"></div>
             DONE (3)
           </div>
-          <div class="cards">
-            <div class="card">Explore ES6 Features 🚀</div>
-            <div class="card">Have Fun 😄</div>
-            <div class="card">Keep Learning 🎯</div>
-          </div>
+          <div class="card">Explore ES6 Features 🚀</div>
+          <div class="card">Have fun 😸</div>
         </div>
-      </section>
-    </main>
+      </div>
+    </div>
   </body>
 </html>

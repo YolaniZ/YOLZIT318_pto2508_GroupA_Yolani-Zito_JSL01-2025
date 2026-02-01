@@ -1,0 +1,154 @@
+body {
+  width: 100%;
+  margin: 0;
+  background: #f4f6fa;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  text-wrap: balance;
+  padding-top: 20px;
+  box-sizing: border-box;
+  padding-left: 30px;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 230px;
+  background: #fff;
+  padding: 30px 20px;
+  border-right: 0.5px solid #e5e5e5;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.sidebar .logo {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 700;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.boards-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: gray;
+  margin-bottom: 30px;
+}
+
+.board-btn {
+  background: #645fc6;
+  color: #fff;
+  padding: 12px 15px;
+  border-radius: 26px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 1000px;
+  font-size: 13px;
+}
+
+/* MAIN AREA */
+.main {
+  flex: 1;
+  overflow-y: auto;
+  padding: 25px;
+  background-color: #f4f6fa;
+}
+
+.board-header {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding: 5px 10px;
+  border-radius: 0%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* COLUMNS */
+.columns {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.column {
+  width: 220px;
+}
+
+.column-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  color: gray;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.todo {
+  background: #4da8f0;
+}
+.doing {
+  background: #9b5de5;
+}
+.done {
+  background: #45c590;
+}
+
+/* CARDS */
+.card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 15px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) and (min-width: 501px) {
+  body {
+    flex-direction: column;
+    display: block;
+    height: auto;
+  }
+  .sidebar {
+    width: auto;
+    height: auto;
+    border-right: none;
+    border-bottom: 0.5px solid #e5e5e5;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .board-btn {
+    width: auto;
+    padding: 40px 50px;
+  }
+
+  .columns {
+    justify-content: center;
+  }
+  .column {
+    width: 100%;
+    max-width: 400px;
+  }
+  .main {
+    padding: 15px;
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    max-width: 80px;
+  }
+}
